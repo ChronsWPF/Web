@@ -1,0 +1,269 @@
+/* styles.css */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141518; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+header {
+    background: linear-gradient(to right, #141518, #1b1c21); /* Dark gradient */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    animation: fadeInDown 0.5s ease; /* Fade in animation */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    margin: 0;
+    color: #ffffff; /* White text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+}
+
+nav input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #212127; /* Dark surface */
+    color: #ffffff; /* White text */
+    font-size: 16px; /* Increase font size */
+    transition: all 0.3s ease; /* Add transition for smoother hover effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    border-bottom: 2px solid #27282d; /* Gray border */
+    margin-top: 20px; /* Add margin to the top */
+}
+
+nav input[type="text"]:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add focus shadow */
+    transform: scale(1.05); /* Scale the input box when focused */
+}
+
+main {
+    max-width: 800px; /* Limit main content width */
+    margin: 0 auto; /* Center main content horizontally */
+    padding: 20px;
+    background-color: #141518; /* Dark background */
+    animation: slideInUp 0.5s ease; /* Slide in animation */
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add a transition to the script boxes */
+/* Add transition for smoother visibility animation */
+.script {
+    background-color: #1b1c21; /* Dark surface */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    border: 1px solid #26272c; /* Add border with specified color */
+    transition: opacity 0.3s ease, max-height 0.3s ease; /* Add transition for smoother visibility animation */
+    overflow: hidden; /* Hide overflow content */
+    
+}
+
+/* Adjust hover effect for the script boxes */
+.script:hover {
+    transform: scale(1.05); /* Scale up the script box on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjust box shadow on hover */
+}
+
+/* Add class to hide script boxes */
+.script.hidden {
+    opacity: 0; /* Hide the script box */
+    max-height: 0; /* Collapse the script box */
+    margin: 0; /* Remove margin to avoid spacing */
+    padding: 0; /* Remove padding to avoid spacing */
+}
+
+.no-match-message {
+    color: red; /* White text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.script h2,
+.script p {
+    margin-bottom: 10px; /* Add margin to separate headings and paragraphs */
+}
+
+.script button {
+    margin-top: 10px; /* Add margin to separate the button from other elements */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h2 {
+    margin-top: 0;
+    color: #ffffff; /* White text */
+}
+
+p {
+    color: #cccccc; /* Light text */
+    line-height: 1.5; /* Increase line height for better readability */
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #1976D2, #0D47A1); /* Primary color gradient */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Add transition for smoother hover effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+button:hover {
+    background: linear-gradient(to right, #0D47A1, #002171); /* Darker blue gradient on hover */
+}
+
+.pagination a {
+    color: #ffffff; /* White text */
+    background: linear-gradient(to right, #1976D2, #0D47A1); /* Primary color gradient */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: background 0.3s ease; /* Add transition for smoother hover effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.pagination a:hover {
+    background: linear-gradient(to right, #0D47A1, #002171); /* Darker blue gradient on hover */
+}
+
+.pagination {
+    position: relative; /* Make the container relatively positioned */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination .prev,
+.pagination .next {
+    position: absolute; /* Position the buttons absolutely */
+}
+
+.pagination .prev {
+    left: calc(50% - 115px); /* Position the previous button closer to the center */
+    margin-top: -50px; /* Adjust the margin to move the button up */
+}
+
+.pagination .next {
+    right: calc(50% - 115px); /* Position the next button closer to the center */
+    margin-top: -50px; /* Adjust the margin to move the button up */
+}
+
+footer {
+    background: linear-gradient(to right, #141518, #1b1c21);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff; /* White text */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    animation: fadeInUp 0.5s ease; /* Fade in animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 9999;
+    display: none;
+}
+
+.message-box p {
+    margin: 0;
+}
+
+/* Animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slideInOut {
+    0% {
+        transform: translate(-50%, -100%);
+    }
+    50% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -100%);
+    }
+}
+
+/* Apply animation */
+.message-box.show {
+    animation: fadeInOut 2s ease;
+}
+
+.message-box.slide {
+    animation: slideInOut 2s ease;
+}
